@@ -1,0 +1,108 @@
+
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+body, html{
+    font-family: 'Montserrat', sans-serif; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #F6F5F7;
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    min-height: 100vh; 
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FC426D;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+}
+
+input{
+    background-color: #e6e6e6;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.contenedor, .hidratacion, .formula {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.contenedor {
+    flex-direction: row;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    width: 60%;
+    height: 60%;
+}
+
+.hidratacion {
+    background-color: #F6F5F7;
+    width: 100%;
+    height: 100%;
+}
+.info{
+    color: #2581CF;
+    font-size: x-large;
+    margin: 12px;
+}
+.formula {
+    background-color: #FC426D;
+    color: #F6F5F7;
+    width: 100%;
+    height: 100%;
+
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+ul li {
+    display: inline-block; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    padding: 10px 10px 10px 10px;
+}
+@media (max-width: 700px) {
+    .contenedor {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        height: 90%;
+    }
+}
+@media (max-width: 1024px) {
+    .contenedor {
+        width: 80%;
+        height: 80%;
+    }
+}

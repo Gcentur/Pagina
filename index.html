@@ -1,28 +1,38 @@
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
     <title>Calculadora</title>
 </head>
-
 <body>
-    <h1>
-        Hidratacion Basal
-    </h1>
-    <h2>
-        Completa todos los datos
-    </h2>
-    <form>
-        <label for="">Peso Kg.</label>
-        <input type="text" name="" id="">
-        <button> calcular </button>
-        <h3>70cc/hr</h3>
-        <h3>m+m/2 105 cc/hr</h3>
-    </form>
-    <h1>
-        Como se calcula?
-    </h1>
-    <ul>
-        <li>de 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-        <li>de 29kg para arriba se suman 20cc por cada kilo adiconal</li>
-        <li>se suman 50 cc por cada kilo de peso pro arriba de 10kg, hasta 20kg</li>
-    </ul>
+    <div class="contenedor">
+        <div class="Hidratacion">
+            <form>
+                <h1>
+                    Hidratacion Basal
+                </h1>
+                <p>
+                    Completa todos los datos
+                </p>
+                <input type="number" name="" id="">
+                <button> CALCULAR </button>
+                <h3 class="info">70cc/hr</h3>
+                <h3 class="info">m+m/2 105 cc/hr</h3>
+            </form>
+        </div>
+        <div class="formula">
+            <h1>
+                Como se calcula?
+            </h1>
+            <div>
+                <ul>
+                    <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+                    <li>Se suman 50 cc por cada kilo de peso pro arriba de 10kg, hasta 20kg</li>
+                    <li>De 29kg para arriba se suman 20cc por cada kilo adiconal</li>
+                    <li>Si el paciente pesa mas de 30kg se utiliza el metodo de calculo por Superficie Corporal </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </body>
-
