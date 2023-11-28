@@ -1,49 +1,64 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="pruebaJS.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+    <title>Calculadora Basal💧</title>
 </head>
-<body>
-    <div id="contenedor">
-      <div id="calculadora">
-        <div class="contenido">
-          <h1>Hidratación Basal</h1>
-          <h3 class="item">Ingrese el peso del paciente:</h3>
-            <input class="item" id="peso" type="number" placeholder="ingresar peso en kg">
-            <p class="item" id="error">*Debe completar correctamente los datos</p>
-            <button id="calcular">Calcular</button>
-            <p class="item resultado" id="resultado1">70 cc/hr</p>
-            <p class="item resultado"id="resultado2">m+m/2 105 cc/hr</p>
-            <p class="item resultado" id="resultado3">resultado 3</p>
+<body class="second-color">
+    <div class="contenedor">
+        <div class="calculadora">
+            <form>
+                <h1>
+                    Hidratación Basal
+                </h1>
+                <p>
+                    Ingrese el peso del paciente
+                </p>
+                <input type="number" id="peso" placeholder="Ingrese el peso en Kg.">
+                <p class="item" id="error">Ingrese un numero mayor a 0</p>
+                <button class="third-color" id="calcular">
+                    CALCULAR
+                </button>
+                <h6 class="info" id="resultado1">
+                    70cc/hr
+                </h6>
+                <h6 class="info" id="resultado2">
+                    m+m/2 105 cc/hr
+                </h6>
+                <h6 class="info" id="resultado3">
+                    105cc/h
+                </h6>
+            </form>
         </div>
-      </div>
-   
-      <div id="detalle">
-        <div class="contenido1" id="holliday">
-          <h1>Método Holliday-Segar</h1>
-          <h2>¿Cómo se calcula?</h2>
-          <ul class="descripcion"> 
-            <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-            <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
-            <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
-          </ul>
-        </div> 
-        <div class="contenido1" id="superficie">
-          <h1>Método Superficie Corporal</h1>
-          <h2>¿Cómo se calcula?</h2>
-          <ul class="descripcion"> 
-            <li>Cuando el niño pesa más de 30kg, se utiliza un calculo diferente:</li>
-            <li>Superficie corporal = ((peso*4)+7) / (peso+90)</li>
-            <li>Este resultado se multiplica por 1500 o por 2000 para hallar el valor del volumen diario en cc, y el medico decide cual de los dos resultados utilizar.</li>
-          </ul>
-        </div> 
-      </div>
+        <div class="desc third-color" id="holliday">
+            <h1>
+                Método Holliday-Segar
+            </h1>
+            <h2>
+                ¿Cómo se calcula?
+            </h2>
+            <div>
+                <ul>
+                    <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+                    <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
+                    <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
+                </ul>
+            </div>
+        </div>
+        <div class="desc third-color" id="superficie">
+            <h1>
+                Método de Superficie Corporal
+            </h1>
+            <div>
+                <ul>
+                    <li>Cuando el niño pesa más de 30kg, se utiliza un calculo diferente:</li>
+                    <li>Superficie corporal = ((peso*4)+7) / (peso+90)</li>
+                    <li>Este resultado se multiplica por 1500 o por 2000 para hallar el valor del volumen diario en cc.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    
 </body>
-</html>
-

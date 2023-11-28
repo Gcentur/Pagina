@@ -1,102 +1,178 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+
+.first-color { 
+    background: #ececec; 
+}
+    
+.second-color { 
+    background: #bee6dc; 
+}
+
+.third-color { 
+    background: #385170; 
+}
+
+.fourth-color { 
+    background: #142d4c;
+}
+
+body, form, .contenedor, .calculadora, .desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 
 body {
-    background: rgb(80, 205, 255);
-    font-family: 'Montserrat', sans-serif;
-    color: #3E363F;
+    font-family: 'Montserrat', sans-serif, Arial, Helvetica; 
+    margin: 0; 
+    min-height: 100vh; 
 }
 
-#contenedor {
-    width: 1000px;
-    height: 500px;
-    text-align: center;
-    /* Estas 3 líneas se encargan de centrar el div vertical y horizontalmente */
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-}
-
-#calculadora {
-    background-color: white;
-    width: 50%;
-    float: left;
-    height: 100%;
-}
-
-#detalle {
-    background-color: blue;
-    color: white;
-    width: 50%;
-    float: right;
-    height: 100%;
-}
-
-.contenido {
-    /* Estas tres líneas van a centrar el contenido verticalmente dentro de cada div */
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    padding: 40px;
-}
-.contenido1 {
-    /* Estas tres líneas van a centrar el contenido verticalmente dentro de cada div */
-    display: none;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    overflow: hidden;
-    padding: 40px;
-}
-
-.descripcion {
-    text-align: left;
-}
-
-input {
-    width: 70%;
-    padding: 12px 15px;
-    border: none;
-    background-color: #eee;
+form {
+    flex-direction: column;
+    margin-bottom: 0;
 }
 
 button {
-    font-size: 15px;
+    color: #9fd3c7;
+    border: none;
+    border-radius: 35px;
+    padding: 10px;
+    margin: 10px;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
     font-weight: bold;
-    padding: 12px 45px;
-    border-radius: 30px;
-    background-color: #2e0afa;
-    border: 1px solid #7441ff;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: transform 20ms ease-in;
-    transform: translateY(20%);
 }
 
-button:active {
-    transform: scale(0.95);
+button:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: #9fd3c7;
+    color: #385170;
 }
 
-.item {
-    color: #2e0afa;
-    font-weight: bold;
-    
+input {
+    background-color: #e6e6e6;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
 }
 
-.resultado {
-    color: #0A81D1;
-    font-weight: bold;
-    font-size: 20px;
-    margin-bottom: 5px;
-    display: none;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.contenedor {
+    flex-direction: row;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    width: 60%;
+    height: 60%;
+    border-radius: 5px;
+}
+
+.calculadora {
+    background-color: #F6F5F7;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 #error {
     color: red;
     font-weight: bold;
     display: none;
+}
+
+.info {
+    color: #385170;
+    font-size: medium;
+    margin: 4px;
+    display: none;
+}
+
+.desc {
+    color: #F6F5F7;
+    width: 100%;
+    height: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+ul li {
+    display: inline-block; 
+    font-size: 18px; 
+    line-height: 1.6; 
+    padding: 10px;
+}
+
+@media (max-width: 1024px) {
+    .contenedor {
+        width: 80%;
+        height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        width: 90%;
+        height: 90%;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+}
+
+@media (max-width: 700px) {
+    .contenedor {
+        flex-direction: column;
+    }
+    .hidratacion {
+        width: 100%;
+        height: 50%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
+
+@media (max-width: 375px) and (min-width: 321px) {
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media (max-width: 320px) {
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 0;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+    .contenedor {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    }
+    .info{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+#holliday, #superficie {
+    display: none;
+}
+
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
 }
