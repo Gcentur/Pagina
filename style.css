@@ -34,7 +34,12 @@ form {
     flex-direction: column;
     margin-bottom: 0;
 }
-
+h1, h2 {
+    text-align: center;
+    font-weight: bold;
+    margin-left: 5px;
+    margin-right: 5px;
+}
 button {
     color: #9fd3c7;
     border: none;
@@ -168,11 +173,4 @@ ul li {
 
 #holliday, #superficie {
     display: none;
-}
-
-h1, h2 {
-    text-align: center;
-    font-weight: bold;
-    margin-left: 5px;
-    margin-right: 5px;
 }
