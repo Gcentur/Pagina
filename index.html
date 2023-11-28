@@ -1,38 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="pruebaJS.js" defer></script>
 </head>
 <body>
-    <div class="contenedor">
-        <div class="Hidratacion">
-            <form>
-                <h1>
-                    Hidratación Basal
-                </h1>
-                <p>
-                    Completa todos los datos
-                </p>
-                <input type="number" name="" id="">
-                <button> CALCULAR </button>
-                <h3 class="info">70cc/hr</h3>
-                <h3 class="info">m+m/2 105 cc/hr</h3>
-            </form>
+    <div id="contenedor">
+      <div id="calculadora">
+        <div class="contenido">
+          <h1>Hidratación Basal</h1>
+          <h3 class="item">Ingrese el peso del paciente:</h3>
+            <input class="item" id="peso" type="number" placeholder="ingresar peso en kg">
+            <p class="item" id="error">*Debe completar correctamente los datos</p>
+            <button id="calcular">Calcular</button>
+            <p class="item resultado" id="resultado1">70 cc/hr</p>
+            <p class="item resultado"id="resultado2">m+m/2 105 cc/hr</p>
+            <p class="item resultado" id="resultado3">resultado 3</p>
         </div>
-        <div class="formula">
-            <h1>
-                ¿Cómo se calcula?
-            </h1>
-            <div>
-                <ul>
-                    <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
-                    <li>Se suman 50 cc por cada kilo de peso pro arriba de 10kg, hasta 20kg</li>
-                    <li>De 29kg para arriba se suman 20cc por cada kilo adiconal</li>
-                    <li>Si el paciente pesa mas de 30kg se utiliza el metodo de calculo por Superficie Corporal </li>
-                </ul>
-            </div>
-        </div>
+      </div>
+   
+      <div id="detalle">
+        <div class="contenido1" id="holliday">
+          <h1>Método Holliday-Segar</h1>
+          <h2>¿Cómo se calcula?</h2>
+          <ul class="descripcion"> 
+            <li>De 0kg a 10kg, se calcula 100cc por cada kilo.</li>
+            <li>Se suman 50cc por cada kilo de peso por arriba de 10kg, hasta 20kg.</li>
+            <li>De 20kg para arriba, se suman 20cc por cada kilo adicional</li>
+          </ul>
+        </div> 
+        <div class="contenido1" id="superficie">
+          <h1>Método Superficie Corporal</h1>
+          <h2>¿Cómo se calcula?</h2>
+          <ul class="descripcion"> 
+            <li>Cuando el niño pesa más de 30kg, se utiliza un calculo diferente:</li>
+            <li>Superficie corporal = ((peso*4)+7) / (peso+90)</li>
+            <li>Este resultado se multiplica por 1500 o por 2000 para hallar el valor del volumen diario en cc, y el medico decide cual de los dos resultados utilizar.</li>
+          </ul>
+        </div> 
+      </div>
     </div>
+    
 </body>
+</html>
+
